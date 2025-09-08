@@ -9,6 +9,8 @@
 </head>
 <body>
     <header>
+	<h1>🍲 Welcome to Recipe App 🍲</h1>
+        <p class="welcome">Discover, create, and share your favorite recipes with the world!</p>
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -25,6 +27,7 @@
 
     <div class="content">
         {% block content %}
+	<p>✨ Start exploring delicious recipes today! ✨</p>
         {% endblock %}
     </div>
 

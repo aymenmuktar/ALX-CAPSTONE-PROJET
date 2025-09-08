@@ -1,17 +1,42 @@
 /* static/css/style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    background: url('/static/images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+/* Dark overlay for better readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 h1 {
-    color: #343a40;
+     margin-top: 50px;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+p.welcome {
+    font-size: 1.5rem;
+    margin: 20px auto;
+    max-width: 600px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    text-align: 20px;
 }
 
 nav ul li {
@@ -21,11 +46,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: #fff;
     transition: 0.3s;
-    font-size: 30px;
-    padding:10px 20px;
+    font-size: 18px;
+    padding: 10px 20px;
     border-radius: 10px;
+    background-color: rgba(0, 123, 255, 0.7);
 }
 
 nav ul li a:hover {
@@ -34,8 +60,8 @@ nav ul li a:hover {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
-    color: #6c757d;
-    bottom: 0;
+    color: #ddd;
+    bottom: 15px;
 }
