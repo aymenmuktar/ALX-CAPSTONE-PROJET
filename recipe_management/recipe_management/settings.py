@@ -24,7 +24,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Tell Django where to look for static files during development
 STATICFILES_DIRS = [
-    BASE_DIR / "recipe_management" / "static",
+    BASE_DIR / "static",
 ]
 
 

@@ -305,6 +305,12 @@ class LoginView(APIView):
 # logout view to remove the token from cookies
 class LogoutView(APIView):
     permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        response = redirect('home')  # Redirect to home page
+        response.delete_cookie('jwt')  # Delete the JWT cookie
+        return response
+
     def post(self, request):
         response = Response()
         response.delete_cookie('jwt')
