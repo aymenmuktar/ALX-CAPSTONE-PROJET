@@ -7,10 +7,11 @@
     <title>{% block title %}My Recipe App{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
-    <header>
+<body style="background: url('{% static 'images/bg.png' %}') no-repeat center center/cover; height: 100vh; margin: 0;">
+    <header class="hero" style="background: url('{% static 'images/bg.png' %}') no-repeat center center/cover; height: 100vh;"> 
 	<h1>🍲 Welcome to Recipe App 🍲</h1>
         <p class="welcome">Discover, create, and share your favorite recipes with the world!</p>
+	<p>✨ Start exploring delicious recipes today! ✨</p>
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>

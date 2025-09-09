@@ -262,11 +262,16 @@ class RecipeView(APIView):
 # the register view (creating new user)
 class Register(APIView):
     permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        return render(request, 'recipe/register.html')  # create this template
+
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+
 
 # the login view in an existing user and saving the token in the cookies using jwt
 class LoginView(APIView):

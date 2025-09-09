@@ -3,8 +3,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('/static/images/bg.png') no-repeat center center fixed;
+    color: white;
+    text-align: center;
+}
+
+/* Hero section with background image */
+.hero {
+    height: 100vh;
+    background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
 }
@@ -12,25 +23,26 @@ body {
 /* Dark overlay for better readability */
 body::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }
 
-h1 {
+.hero h1 {
      margin-top: 50px;
     font-size: 3rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
-p.welcome {
+.hero p. {
     font-size: 1.5rem;
     margin: 20px auto;
     max-width: 600px;
     line-height: 1.5;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
 nav ul {
