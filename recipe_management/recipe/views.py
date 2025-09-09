@@ -263,8 +263,6 @@ class RecipeView(APIView):
 class Register(APIView):
     permission_classes = [permissions.AllowAny]
 
-    def get(self, request):
-        return render(request, 'recipe/register.html')  # create this template
 
     def post(self, request):
         serializer = UserSerializer(data=request.data)
